@@ -1,22 +1,22 @@
 import "./App.css";
-import LocalStorageExample from "./components/LocalStorageExample";
-import AddToCart from "./components/AddToCart";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
+      <h2>Examples</h2>
       <div>
-        <h2>LocalStorage Example</h2>
-        <p>
-          When you type something in the input field, it will save it to
-          localStorage on change and it will fill it with on load if any value
-          is available on the localStorage with the specific key.
-        </p>
-        <LocalStorageExample />
-      </div>
-      <br />
-      <div>
-        <AddToCart />
+        <ul>
+          <Link to={"/input-example"}>
+            <li>Input Example</li>
+          </Link>
+          <Link to={"/localstorage"}>
+            <li>LocalStorage</li>
+          </Link>
+          <Link to={"/redux-counter"}>
+            <li>Redux Example</li>
+          </Link>
+        </ul>
       </div>
     </div>
   );

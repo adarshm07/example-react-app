@@ -2,30 +2,24 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
-import ReduxExample from "./pages/ReduxExample";
+
+// React router
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import { Provider } from "react-redux";
 import { store } from "./store";
+import InputExample from "./pages/inputExample";
+import LocalStorage from "./pages/localStorage";
+import Redux from "./pages/Redux";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "/redux",
-    element: <ReduxExample />,
-  },
-  {
-    path: "about",
-    element: <div>About</div>,
-  },
-]);
+const routes = [
+  { path: "/", element: <App /> },
+  { path: "/input-example", element: <InputExample /> },
+  { path: "/localstorage", element: <LocalStorage /> },
+  { path: "/redux-counter", element: <Redux /> },
+];
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

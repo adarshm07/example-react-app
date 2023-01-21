@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function LocalStorageExample() {
+function TextLocalStorage() {
   // State to hold the value from localStorage
   const [localValue, setLocalValue] = useState(
     localStorage.getItem("exampleKey") || ""
@@ -19,4 +19,4 @@ function LocalStorageExample() {
   );
 }
 
-export default LocalStorageExample;
+export default TextLocalStorage;
