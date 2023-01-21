@@ -1,11 +1,8 @@
-import { useState } from "react";
 import "./App.css";
 import LocalStorageExample from "./components/LocalStorageExample";
 import AddToCart from "./components/AddToCart";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
       <div>
